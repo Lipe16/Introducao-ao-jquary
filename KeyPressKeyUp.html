@@ -1,0 +1,31 @@
+<html>
+	<head>
+		
+		
+		<script src="jquery-3.3.1.min.js" type="text/javascript"></script>
+		
+		<script  type="text/javascript">
+			$(document).ready(function(){//padrão do Jquary é iniciar as funções depois que o documento for lido
+			
+				$('#txtData').focus();
+				
+				$('#txtFone').keypress( function(e){
+					if(e.which == 13){
+					
+						$('#txtData').focus()
+					}
+				});
+				
+				$('#txtData').keyup(function(){
+					alert($('#txtFone').val());
+				});
+				
+			});
+		</script>
+	</head>
+	
+	<body>
+		Telefone: <input type='text' id="txtFone"/>
+		Data: <input type='text' id="txtData"/>
+	</body>
+</html>
